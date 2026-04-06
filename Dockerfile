@@ -39,6 +39,8 @@ RUN pip install --no-cache-dir --upgrade pip "setuptools<81" wheel && \
       torchaudio==2.9.1 \
       --index-url https://download.pytorch.org/whl/cu130
 
+RUN pip install --no-cache-dir torchcodec==0.11.0
+
 RUN git clone https://github.com/RoyalCities/RC-stable-audio-tools.git /opt/RC-stable-audio-tools && \
     cd /opt/RC-stable-audio-tools && \
     git checkout "${RC_STABLE_AUDIO_TOOLS_REF}" && \
